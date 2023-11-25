@@ -2227,3 +2227,7 @@ textarea:focus {
 	.wd_story_covers_box_right{width:410px;}
 }
 /*-- Responsive css End --*/
+
+.wd_story_covers{
+    padding-bottom:20px;
+}

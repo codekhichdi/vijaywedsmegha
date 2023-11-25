@@ -60,6 +60,7 @@
             loop: true,
             margin: 45,
             nav: false,
+            autoplaySpeed:2000,
             responsive: {
                 0: {
                     items: 1
@@ -79,6 +80,7 @@
             margin: 0,
             nav: false,
             autoplay: true,
+            autoplaySpeed: 2000,
             responsive: {
                 0: {
                     items: 1

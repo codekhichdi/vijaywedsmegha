@@ -469,7 +469,7 @@
                                         <img src="images/content/story_1.jpg" style="max-width:220px;max-height:320px;" alt="Story">
                                     </div>
                                     <div class="wd_story_covers_box_datails">
-                                        <span>01 June 2022</span>
+                                        <span>25 April 2022</span>
                                         <h1>When Vijay Met Megha</h1>
                                         <span>That day changed Life</span>
                                         <p>We met , we talked ( for an hour ). Yes we talked for an hour in our first meeting itself. We liked each other. It was YES from both of us. </p>
@@ -478,8 +478,8 @@
                                 <div class="wd_story_covers_box_right">
                                     <div class="wd_story_dot"><span></span></div>
                                     <div class="wd_story_covers_box_datails">
-                                        <span>01 June 2022</span>
-                                        <h1> When Nayi(s)<br>met Nayi(s) </h1>
+                                        <span>25 April 2022</span>
+                                        <h1> When Nayi(s)<br>met Parekh(s) </h1>
                                         <span>Our Best Decision Ever</span>
                                         <p>This time it was our better halves (before we met each other) to decide if we are right for each other. So, here we are. </p>
                                     </div>
@@ -493,7 +493,7 @@
                                         <img src="images/content/story_3.jpg" style="max-width:220px;max-height:320px;" alt="Story">
                                     </div>
                                     <div class="wd_story_covers_box_datails">
-                                        <span>05 June 2022</span>
+                                        <span>01 May 2022</span>
                                         <h1>First Text ,<br> First Call</h1>
                                         <span>That was so wonderful</span>
                                         <p>You don't like someone for their looks, or their clothes or for their fancy car, but because there is a connection that you feel with them.</p>
@@ -723,7 +723,7 @@
                 },
                 {
                     title: "Wedding Ceremony",
-                    date: "08th December 23 , 10:00 am",
+                    date: "08th December 23 , 11:00 am",
                     location: "Vasavada Govt. Hall, Khokhra, Ahmedabad, Gujarat"
                 }
             ];
@@ -755,8 +755,8 @@
                 },
                 {
                     title: "Reception Ceremony",
-                    date: "09nd December 23, 7:30 pm",
-                    location: "Siddhpur Ahmedabad, Gujarat"
+                    date: "09nd December 23, 12:00 pm",
+                    location: "Siddhpur Patan, Gujarat"
                 }
             ];
 
@@ -776,9 +776,14 @@
 
             const brideFamilyMembers = [
                 {
-                    name: "Baa",
+                    name: "Late Chandubhai Parekh",
+                    role: "(Megha's Grandfather)",
+                    image: "images/content/megha-daa.jpg"
+                },
+                {
+                    name: "Champaben Parekh",
                     role: "(Megha's Grandmother)",
-                    image: "fm5.jpg"
+                    image: "images/content/megha-baa.jpg"
                 },  
                 {
                     name: "Mr. Rajesh Parekh",
@@ -791,7 +796,7 @@
                     image: "images/content/fm6.jpg"
                 },                ,
                 {
-                    name: "----- Nayi",
+                    name: "Jay Parekh",
                     role: "(Megha's Younger Brother)",
                     image: "images/content/fm12.jpg"
                 }
@@ -837,7 +842,7 @@
                 {
                     name: "Mrs. Jayaben Nayi",
                     role: "(Vijay's Mother)",
-                    image: "images/content/fm2.jpg"
+                    image: "images/content/mummy1.jpg"
                 },
                 {
                     name: "Varsha Sharma",
@@ -905,12 +910,20 @@
                 'Naranbhai +91 9574964670 <br> Vijay +91 9904842636',
                 'Two Worlds Collide in Love\'s Orbit! Get ready for a cosmic celebration as we merge our lives and love on this extraordinary day.'
             ];
-            const iconClasses = ['fa fa-map-marker', 'fa fa-phone', 'fa fa-envelope'];
+            const iconClasses = ['fa fa-map-marker', 'fa fa-phone', 'fa fa-heart'];
             for (let i = 0; i < 3; i++) {
                 const column = $('<div>').addClass('col-lg-4 col-md-4 col-sm-4 col-xs-12');
                 const infoBox = $('<div>').addClass('wd_footer_infobox');
                 const footIcon = $('<div>').addClass('wd_footicon');
-                const icon = $('<i>').addClass(iconClasses[i]).attr('aria-hidden', 'true');
+                const icon = $('<i>').addClass(iconClasses[i]).attr('aria-hidden', 'true').css('cursor','pointer');
+                $(icon).click(function () {
+                    if ($(this).hasClass('fa-map-marker')) {
+                        location.href = "https://maps.app.goo.gl/iJgbydj9Jfk5Hq779";
+                    }
+                    if ($(this).hasClass('fa-phone')) {
+                        location.href = "tel:+919574964670";
+                    }
+                });
                 const heading = $('<h2>').text(headings[i]);
                 const paragraph = $('<p>').html(addresses[i]);
 
